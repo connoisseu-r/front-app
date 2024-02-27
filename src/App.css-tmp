@@ -1,0 +1,36 @@
+
+article {
+  background-color: #FFFFFF;
+}
+
+aside {
+    width: 30%;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+    background-color: #F6F8FA;
+  }
+  
+  aside > h2, ul, li {
+    margin: 0.5rem;
+  }
+
+footer {
+  clear: both;
+/*  position: absolute;
+  bottom: -2em;
+*/
+  margin-top: auto;
+  padding-left: 50px ;
+  margin-bottom:-20px;
+  opacity: 0.5;
+  z-index: -1;
+/*
+  background-color:#6f6b6b;
+  border: dashed;
+*/
+}
+  

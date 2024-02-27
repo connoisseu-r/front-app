@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+$linkPink: rgb(216, 29, 216);
+$linkPurple: rgb(98, 16, 250);
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    background-color: #1b1b1b;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+*, a {
+    color: #ffffff;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+        content: "";
+        position: absolute;          
+        height: 3px;
+        right: 0px;
+        bottom: -3px;
+        left: 0px;
+        background-color: $linkPink;
+    }
+    
+    &:hover {
+        color: $linkPink;
+
+        &::before {
+            background: linear-gradient(to right, $linkPink 40%, $linkPurple 75%);               
+        }
+    }
+}
+
+
+nav {
+  margin-bottom: 4rem;
+  padding: 10px;
+  font-size: 1.5rem;
+
+  @media (min-width: 600px){
+      padding: 20px;
+  }   
+
+  ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;      
+  }
+
+  a {
+    font-size: 1.25rem;
+    
+    @media (min-width: 42em){
+      font-size: 2rem;
+    }
+  }
+}
+
+nav.grid {
+
+  ul {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-gap: 10px;
+      justify-content: center;
+      justify-items: center;
+
+      @media (min-width: 600px){
+          grid-template-columns: 1fr repeat(3, fit-content(50px));
+          grid-gap: 20px;
+          justify-items: end;
+      }
+  }
+
+  .fullwidth {
+      grid-column: 1 / 4;
+
+      @media (min-width: 600px){
+          grid-column: 1 / 2;
+          justify-self: start;
+      }
+  }
+}

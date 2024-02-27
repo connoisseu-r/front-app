@@ -1,0 +1,119 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/* global set */
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+html {
+    font-family: sans-serif;
+  }
+
+body {
+  margin: 0;
+}
+
+header {
+  background: rgb(7, 7, 7);
+  height: 100px;
+}
+
+
+footer {
+  background: rgb(190, 183, 190);
+  height: 5vh;
+  opacity: 100%;
+  text-align: center;
+  margin-top: 1vh;
+/*   position: fixed;
+  bottom: 0;
+  width: 100vw;
+*/
+}
+
+
+
+h1 {
+  color: white;
+  margin: 0.5em;
+  font-size: xx-large;
+}
+
+
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+
+/* button style set */
+.button {
+
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 10px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  margin: 1em;
+}
+
+.small-btn {
+    width: 50px;
+    height: 25px;
+}
+
+.medium-btn {
+    width: 70px;
+    height: 30px;
+}
+
+.big-btn {
+    width: 100px;
+    height: 50px;
+}
+
+/* Add your flexbox CSS below here */
+section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 20px;
+  box-sizing: content-box;
+}
+
+article {
+    flex: 1;
+}
+
+section.header-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-self: center;
+  align-items: stretch;
+}
+
+
+/* arrange elements */
+header {
+  grid-column: 1/-1;
+  grid-row: 1;
+}
+
+section {
+  grid-column: 1;
+  grid-row: 2
+}
+
+footer {
+  grid-column: 1/-1;
+}
